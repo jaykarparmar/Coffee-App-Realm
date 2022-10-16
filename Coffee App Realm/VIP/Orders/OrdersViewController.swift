@@ -71,8 +71,16 @@ class OrdersViewController: UIViewController {
         }
     }
     
+    func moveToAddUpdateView(isEdit: Bool, order: CoffeeOrder? = nil) {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc : AddUpdateOrdersViewController = mainStoryboard.instantiateViewController(withIdentifier: "AddUpdateOrdersViewController") as! AddUpdateOrdersViewController
+        vc.isOrderEdit = isEdit
+        vc.myOrder = order
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @IBAction func actionAdd(_ sender: Any) {
-        
+        self.moveToAddUpdateView(isEdit: false)
     }
     
     
@@ -96,6 +104,10 @@ extension OrdersViewController: UITableViewDelegate, UITableViewDataSource {
         if editingStyle == .delete {
             
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.moveToAddUpdateView(isEdit: true, order: self.arrOrders[indexPath.row])
     }
 
 }

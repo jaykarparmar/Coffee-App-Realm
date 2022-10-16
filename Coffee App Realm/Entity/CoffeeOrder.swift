@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 
 class CoffeeOrder: Object {
+    @objc dynamic var uid: String? = ""
     @objc dynamic var coffeeType : String? = ""
     @objc dynamic var coffeeSize : String? = ""
 }

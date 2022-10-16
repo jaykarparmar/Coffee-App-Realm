@@ -34,16 +34,16 @@
 			</array>
 		</dict>
 	</dict>
-    <key>FacebookAppID</key>
-    <string>1224397931439926</string>
-    <key>FacebookDisplayName</key>
-    <string>iOSAppTemplates</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fb-messenger-share-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
-    </array>
+	<key>FacebookAppID</key>
+	<string>1224397931439926</string>
+	<key>FacebookDisplayName</key>
+	<string>Coffee App Realm</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 </dict>
 </plist>

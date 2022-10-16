@@ -19,6 +19,11 @@
 		9580183928FBF177007A35D5 /* OrdersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9580183728FBF177007A35D5 /* OrdersTableViewCell.xib */; };
 		9580183C28FBF1EE007A35D5 /* CoffeeOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9580183B28FBF1EE007A35D5 /* CoffeeOrder.swift */; };
 		9580183F28FBF6BD007A35D5 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9580183E28FBF6BD007A35D5 /* SigninViewController.swift */; };
+		9580184228FC0012007A35D5 /* AddUpdateOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9580184128FC0012007A35D5 /* AddUpdateOrdersViewController.swift */; };
+		9580184428FC0029007A35D5 /* AddUpdateOrdersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9580184328FC0029007A35D5 /* AddUpdateOrdersInteractor.swift */; };
+		9580184628FC0040007A35D5 /* AddUpdateOrdersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9580184528FC0040007A35D5 /* AddUpdateOrdersPresenter.swift */; };
+		9580184928FC0063007A35D5 /* CoffeeTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9580184728FC0063007A35D5 /* CoffeeTypeTableViewCell.swift */; };
+		9580184A28FC0063007A35D5 /* CoffeeTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9580184828FC0063007A35D5 /* CoffeeTypeTableViewCell.xib */; };
 		A87A01728B550EDA9783CFF4 /* Pods_Coffee_App_Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E08507C843CA09C37A2792E /* Pods_Coffee_App_Realm.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +45,11 @@
 		9580183728FBF177007A35D5 /* OrdersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdersTableViewCell.xib; sourceTree = "<group>"; };
 		9580183B28FBF1EE007A35D5 /* CoffeeOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeOrder.swift; sourceTree = "<group>"; };
 		9580183E28FBF6BD007A35D5 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		9580184128FC0012007A35D5 /* AddUpdateOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateOrdersViewController.swift; sourceTree = "<group>"; };
+		9580184328FC0029007A35D5 /* AddUpdateOrdersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateOrdersInteractor.swift; sourceTree = "<group>"; };
+		9580184528FC0040007A35D5 /* AddUpdateOrdersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateOrdersPresenter.swift; sourceTree = "<group>"; };
+		9580184728FC0063007A35D5 /* CoffeeTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTypeTableViewCell.swift; sourceTree = "<group>"; };
+		9580184828FC0063007A35D5 /* CoffeeTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoffeeTypeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,7 @@
 		9580182E28FBF0F9007A35D5 /* VIP */ = {
 			isa = PBXGroup;
 			children = (
+				9580184028FBFFF1007A35D5 /* AddUpdateOrders */,
 				9580183D28FBF69B007A35D5 /* Signin */,
 				9580182F28FBF105007A35D5 /* Orders */,
 			);
@@ -130,6 +141,18 @@
 				9580183E28FBF6BD007A35D5 /* SigninViewController.swift */,
 			);
 			path = Signin;
+			sourceTree = "<group>";
+		};
+		9580184028FBFFF1007A35D5 /* AddUpdateOrders */ = {
+			isa = PBXGroup;
+			children = (
+				9580184128FC0012007A35D5 /* AddUpdateOrdersViewController.swift */,
+				9580184328FC0029007A35D5 /* AddUpdateOrdersInteractor.swift */,
+				9580184528FC0040007A35D5 /* AddUpdateOrdersPresenter.swift */,
+				9580184728FC0063007A35D5 /* CoffeeTypeTableViewCell.swift */,
+				9580184828FC0063007A35D5 /* CoffeeTypeTableViewCell.xib */,
+			);
+			path = AddUpdateOrders;
 			sourceTree = "<group>";
 		};
 		EB8598360142550382F34BA9 /* Pods */ = {
@@ -204,6 +227,7 @@
 				9580182728FBEE42007A35D5 /* LaunchScreen.storyboard in Resources */,
 				9580182428FBEE42007A35D5 /* Assets.xcassets in Resources */,
 				9580183928FBF177007A35D5 /* OrdersTableViewCell.xib in Resources */,
+				9580184A28FC0063007A35D5 /* CoffeeTypeTableViewCell.xib in Resources */,
 				9580182228FBEE41007A35D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,12 +283,16 @@
 			files = (
 				9580181B28FBEE41007A35D5 /* AppDelegate.swift in Sources */,
 				9580183128FBF125007A35D5 /* OrdersViewController.swift in Sources */,
+				9580184428FC0029007A35D5 /* AddUpdateOrdersInteractor.swift in Sources */,
 				9580181D28FBEE41007A35D5 /* SceneDelegate.swift in Sources */,
 				9580183528FBF14C007A35D5 /* OrdersInteractor.swift in Sources */,
+				9580184228FC0012007A35D5 /* AddUpdateOrdersViewController.swift in Sources */,
 				9580183F28FBF6BD007A35D5 /* SigninViewController.swift in Sources */,
 				9580183828FBF177007A35D5 /* OrdersTableViewCell.swift in Sources */,
 				9580183328FBF13A007A35D5 /* OrdersPresenter.swift in Sources */,
+				9580184928FC0063007A35D5 /* CoffeeTypeTableViewCell.swift in Sources */,
 				9580183C28FBF1EE007A35D5 /* CoffeeOrder.swift in Sources */,
+				9580184628FC0040007A35D5 /* AddUpdateOrdersPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

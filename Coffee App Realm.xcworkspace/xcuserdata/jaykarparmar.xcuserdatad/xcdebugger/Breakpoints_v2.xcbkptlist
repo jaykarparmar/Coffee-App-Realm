@@ -7,17 +7,29 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FDF6876D-FD90-4C1C-86EF-1C9A163C6AA3"
-            shouldBeEnabled = "No"
+            uuid = "D5E8FDB5-06AF-4D5E-BECD-2E050826F5F7"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Coffee App Realm/VIP/Signin/SigninViewController.swift"
+            filePath = "Coffee App Realm/SceneDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "actionFacebook(_:)"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "scene(_:openURLContexts:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "E24B75C2-4B2C-4032-AF41-E998FAB4AEE5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -20,4 +20,5 @@ class OrdersInteractor: OrdersInteractorProtocol {
     func getOrdersFromRealm() -> [CoffeeOrder] {
         return realm.objects(CoffeeOrder.self).map({$0})
     }
+    
 }
