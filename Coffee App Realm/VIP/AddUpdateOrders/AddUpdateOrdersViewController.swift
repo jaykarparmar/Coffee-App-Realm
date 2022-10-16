@@ -73,6 +73,7 @@ class AddUpdateOrdersViewController: UIViewController {
             for i in 0..<self.arrCoffeeSize.count {
                 if self.arrCoffeeSize[i] == self.myOrder?.coffeeSize {
                     self.selectedCoffeeSize = i
+                    self.stepperCoffeeSize.selectedSegmentIndex = i
                 }
             }
         }
