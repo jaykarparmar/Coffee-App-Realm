@@ -4,11 +4,10 @@
 target 'Coffee App Realm' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-pod 'MBProgressHUD'
-    pod 'RealmSwift'
-pod 'FacebookCore'
-	pod 'FacebookLogin'
-
+  pod 'MBProgressHUD'
+  pod 'RealmSwift'
+  pod 'FBSDKLoginKit'
+  
   # Pods for Coffee App Realm
-
+  
 end

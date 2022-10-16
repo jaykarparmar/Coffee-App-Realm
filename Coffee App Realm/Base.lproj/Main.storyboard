@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eUt-wB-T1v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lfo-nV-9dd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -11,7 +11,7 @@
         <!--Orders View Controller-->
         <scene sceneID="KiD-8J-uTo">
             <objects>
-                <viewController storyboardIdentifier="OrdersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ap5-rP-Nkd" customClass="OrdersViewController" customModule="Coffee_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrdersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ap5-rP-Nkd" customClass="OrdersViewController" customModule="Coffee_App_Realm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pAF-gO-ThO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,7 +81,7 @@
         <!--Navigation Controller-->
         <scene sceneID="DTg-vz-bCV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="eUt-wB-T1v" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="eUt-wB-T1v" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fcl-c0-g1I">
@@ -117,7 +117,7 @@
         <!--Add Update Orders View Controller-->
         <scene sceneID="uSd-vF-dZ7">
             <objects>
-                <viewController storyboardIdentifier="AddUpdateOrdersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iOo-jp-2ge" customClass="AddUpdateOrdersViewController" customModule="Coffee_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddUpdateOrdersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iOo-jp-2ge" customClass="AddUpdateOrdersViewController" customModule="Coffee_App_Realm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jL9-Kz-b5a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
