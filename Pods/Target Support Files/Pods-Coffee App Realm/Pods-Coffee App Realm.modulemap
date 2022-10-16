@@ -1,0 +1,6 @@
+framework module Pods_Coffee_App_Realm {
+  umbrella header "Pods-Coffee App Realm-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		9580181B28FBEE41007A35D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9580181A28FBEE41007A35D5 /* AppDelegate.swift */; };
 		9580181D28FBEE41007A35D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9580181C28FBEE41007A35D5 /* SceneDelegate.swift */; };
-		9580181F28FBEE41007A35D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9580181E28FBEE41007A35D5 /* ViewController.swift */; };
 		9580182228FBEE41007A35D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9580182028FBEE41007A35D5 /* Main.storyboard */; };
 		9580182428FBEE42007A35D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9580182328FBEE42007A35D5 /* Assets.xcassets */; };
 		9580182728FBEE42007A35D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9580182528FBEE42007A35D5 /* LaunchScreen.storyboard */; };
+		9580183128FBF125007A35D5 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9580183028FBF125007A35D5 /* OrdersViewController.swift */; };
+		9580183328FBF13A007A35D5 /* OrdersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9580183228FBF13A007A35D5 /* OrdersPresenter.swift */; };
+		9580183528FBF14C007A35D5 /* OrdersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9580183428FBF14C007A35D5 /* OrdersInteractor.swift */; };
+		9580183828FBF177007A35D5 /* OrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9580183628FBF177007A35D5 /* OrdersTableViewCell.swift */; };
+		9580183928FBF177007A35D5 /* OrdersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9580183728FBF177007A35D5 /* OrdersTableViewCell.xib */; };
+		9580183C28FBF1EE007A35D5 /* CoffeeOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9580183B28FBF1EE007A35D5 /* CoffeeOrder.swift */; };
+		9580183F28FBF6BD007A35D5 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9580183E28FBF6BD007A35D5 /* SigninViewController.swift */; };
+		A87A01728B550EDA9783CFF4 /* Pods_Coffee_App_Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E08507C843CA09C37A2792E /* Pods_Coffee_App_Realm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E08507C843CA09C37A2792E /* Pods_Coffee_App_Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffee_App_Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		358B1D7F11410925950ADF88 /* Pods-Coffee App Realm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee App Realm.release.xcconfig"; path = "Target Support Files/Pods-Coffee App Realm/Pods-Coffee App Realm.release.xcconfig"; sourceTree = "<group>"; };
+		65708EBCF2D79682C71AE2DB /* Pods-Coffee App Realm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee App Realm.debug.xcconfig"; path = "Target Support Files/Pods-Coffee App Realm/Pods-Coffee App Realm.debug.xcconfig"; sourceTree = "<group>"; };
 		9580181728FBEE41007A35D5 /* Coffee App Realm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee App Realm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9580181A28FBEE41007A35D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9580181C28FBEE41007A35D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9580181E28FBEE41007A35D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9580182128FBEE41007A35D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9580182328FBEE42007A35D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9580182628FBEE42007A35D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9580182828FBEE42007A35D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9580183028FBF125007A35D5 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		9580183228FBF13A007A35D5 /* OrdersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersPresenter.swift; sourceTree = "<group>"; };
+		9580183428FBF14C007A35D5 /* OrdersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersInteractor.swift; sourceTree = "<group>"; };
+		9580183628FBF177007A35D5 /* OrdersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewCell.swift; sourceTree = "<group>"; };
+		9580183728FBF177007A35D5 /* OrdersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdersTableViewCell.xib; sourceTree = "<group>"; };
+		9580183B28FBF1EE007A35D5 /* CoffeeOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeOrder.swift; sourceTree = "<group>"; };
+		9580183E28FBF6BD007A35D5 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A87A01728B550EDA9783CFF4 /* Pods_Coffee_App_Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21FC6894A379DEACA90767AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E08507C843CA09C37A2792E /* Pods_Coffee_App_Realm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9580180E28FBEE41007A35D5 = {
 			isa = PBXGroup;
 			children = (
 				9580181928FBEE41007A35D5 /* Coffee App Realm */,
 				9580181828FBEE41007A35D5 /* Products */,
+				EB8598360142550382F34BA9 /* Pods */,
+				21FC6894A379DEACA90767AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +83,62 @@
 		9580181928FBEE41007A35D5 /* Coffee App Realm */ = {
 			isa = PBXGroup;
 			children = (
+				9580183A28FBF1CD007A35D5 /* Entity */,
+				9580182E28FBF0F9007A35D5 /* VIP */,
 				9580181A28FBEE41007A35D5 /* AppDelegate.swift */,
 				9580181C28FBEE41007A35D5 /* SceneDelegate.swift */,
-				9580181E28FBEE41007A35D5 /* ViewController.swift */,
 				9580182028FBEE41007A35D5 /* Main.storyboard */,
 				9580182328FBEE42007A35D5 /* Assets.xcassets */,
 				9580182528FBEE42007A35D5 /* LaunchScreen.storyboard */,
 				9580182828FBEE42007A35D5 /* Info.plist */,
 			);
 			path = "Coffee App Realm";
+			sourceTree = "<group>";
+		};
+		9580182E28FBF0F9007A35D5 /* VIP */ = {
+			isa = PBXGroup;
+			children = (
+				9580183D28FBF69B007A35D5 /* Signin */,
+				9580182F28FBF105007A35D5 /* Orders */,
+			);
+			path = VIP;
+			sourceTree = "<group>";
+		};
+		9580182F28FBF105007A35D5 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				9580183028FBF125007A35D5 /* OrdersViewController.swift */,
+				9580183228FBF13A007A35D5 /* OrdersPresenter.swift */,
+				9580183428FBF14C007A35D5 /* OrdersInteractor.swift */,
+				9580183628FBF177007A35D5 /* OrdersTableViewCell.swift */,
+				9580183728FBF177007A35D5 /* OrdersTableViewCell.xib */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		9580183A28FBF1CD007A35D5 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				9580183B28FBF1EE007A35D5 /* CoffeeOrder.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		9580183D28FBF69B007A35D5 /* Signin */ = {
+			isa = PBXGroup;
+			children = (
+				9580183E28FBF6BD007A35D5 /* SigninViewController.swift */,
+			);
+			path = Signin;
+			sourceTree = "<group>";
+		};
+		EB8598360142550382F34BA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65708EBCF2D79682C71AE2DB /* Pods-Coffee App Realm.debug.xcconfig */,
+				358B1D7F11410925950ADF88 /* Pods-Coffee App Realm.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9580182B28FBEE42007A35D5 /* Build configuration list for PBXNativeTarget "Coffee App Realm" */;
 			buildPhases = (
+				C175DB30324244BC2B52FD89 /* [CP] Check Pods Manifest.lock */,
 				9580181328FBEE41007A35D5 /* Sources */,
 				9580181428FBEE41007A35D5 /* Frameworks */,
 				9580181528FBEE41007A35D5 /* Resources */,
+				1FC8672A67194DE4764098D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,20 +203,68 @@
 			files = (
 				9580182728FBEE42007A35D5 /* LaunchScreen.storyboard in Resources */,
 				9580182428FBEE42007A35D5 /* Assets.xcassets in Resources */,
+				9580183928FBF177007A35D5 /* OrdersTableViewCell.xib in Resources */,
 				9580182228FBEE41007A35D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FC8672A67194DE4764098D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffee App Realm/Pods-Coffee App Realm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffee App Realm/Pods-Coffee App Realm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coffee App Realm/Pods-Coffee App Realm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C175DB30324244BC2B52FD89 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Coffee App Realm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9580181328FBEE41007A35D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9580181F28FBEE41007A35D5 /* ViewController.swift in Sources */,
 				9580181B28FBEE41007A35D5 /* AppDelegate.swift in Sources */,
+				9580183128FBF125007A35D5 /* OrdersViewController.swift in Sources */,
 				9580181D28FBEE41007A35D5 /* SceneDelegate.swift in Sources */,
+				9580183528FBF14C007A35D5 /* OrdersInteractor.swift in Sources */,
+				9580183F28FBF6BD007A35D5 /* SigninViewController.swift in Sources */,
+				9580183828FBF177007A35D5 /* OrdersTableViewCell.swift in Sources */,
+				9580183328FBF13A007A35D5 /* OrdersPresenter.swift in Sources */,
+				9580183C28FBF1EE007A35D5 /* CoffeeOrder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +408,7 @@
 		};
 		9580182C28FBEE42007A35D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65708EBCF2D79682C71AE2DB /* Pods-Coffee App Realm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +436,7 @@
 		};
 		9580182D28FBEE42007A35D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 358B1D7F11410925950ADF88 /* Pods-Coffee App Realm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
