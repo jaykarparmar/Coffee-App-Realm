@@ -38,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 */
 var user = FBUser()
+let kAppDelegate = UIApplication.shared.delegate as! AppDelegate
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -48,23 +49,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         // Override point for customization after application launch.
         
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        if realm.objects(FBUser.self).map({$0}).count > 0 {
+            user = realm.objects(FBUser.self).map({$0}).first as! FBUser
+        }
         
+        //        print(realm.objects(FBUser.self).map({$0}))
+        
+        if user.token == nil ||  user.token == "" {
+            print("User Not Available")
+            self.callLoginScreen()
+        }
+        else {
+            print("User Available")
+            self.callHomeScreen()
+        }
         return true
     }
     
-//    func callHomeScreen() {
-//        let navigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeNavigationController") as! UINavigationController
-////        let window = UIApplication.shared.delegate!.window!
-////        window!.rootViewController = navigationController
-////        let window = UIApplication.shared.keyWindow
-//        self.window!.rootViewController = navigationController
-//        UIView.transition(with: window!, duration: 0.3, options: [.transitionCrossDissolve], animations: nil, completion: nil)
-//
-////        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-////                 let homePage = mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-////                 self.window?.rootViewController = homePage
-//
-//    }
+    func callHomeScreen() {
+        let navigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeNavigationController") as! UINavigationController
+        self.window!.rootViewController = navigationController
+        UIView.transition(with: window!, duration: 0.3, options: [.transitionCrossDissolve], animations: nil, completion: nil)
+    }
+    
+    func callLoginScreen() {
+        let navigation:UINavigationController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! UINavigationController
+        let window = UIApplication.shared.delegate!.window!
+        window!.rootViewController = navigation
+        UIView.transition(with: window!, duration: 0.3, options: [.transitionCrossDissolve], animations: nil, completion: nil)
+    }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return ApplicationDelegate.shared.application(app, open: url, options: options)

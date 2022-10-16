@@ -28,15 +28,26 @@
                                     <action selector="actionAdd:" destination="Ap5-rP-Nkd" eventType="touchUpInside" id="fKK-pu-rb9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61J-9x-cXX">
+                                <rect key="frame" x="20" y="54" width="20" height="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="power" catalog="system"/>
+                                <connections>
+                                    <action selector="actionAdd:" destination="Ap5-rP-Nkd" eventType="touchUpInside" id="Ttk-8r-Qwe"/>
+                                    <action selector="actionLogout:" destination="Ap5-rP-Nkd" eventType="touchUpInside" id="RLa-i8-QOZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9wz-nF-Wxr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Kx0-bA-jNt" firstAttribute="top" secondItem="9wz-nF-Wxr" secondAttribute="top" constant="10" id="BTP-WV-2j2"/>
                             <constraint firstItem="9wz-nF-Wxr" firstAttribute="bottom" secondItem="PEx-cD-FZE" secondAttribute="bottom" id="RMM-Rq-RKo"/>
+                            <constraint firstItem="61J-9x-cXX" firstAttribute="leading" secondItem="9wz-nF-Wxr" secondAttribute="leading" constant="20" id="Ych-nz-hEn"/>
                             <constraint firstItem="PEx-cD-FZE" firstAttribute="leading" secondItem="9wz-nF-Wxr" secondAttribute="leading" id="dpU-rL-UgP"/>
                             <constraint firstItem="9wz-nF-Wxr" firstAttribute="trailing" secondItem="Kx0-bA-jNt" secondAttribute="trailing" constant="20" id="eZl-bC-L1O"/>
                             <constraint firstItem="PEx-cD-FZE" firstAttribute="top" secondItem="Kx0-bA-jNt" secondAttribute="bottom" constant="10" id="faf-rB-UHa"/>
+                            <constraint firstItem="61J-9x-cXX" firstAttribute="top" secondItem="9wz-nF-Wxr" secondAttribute="top" constant="10" id="fge-Uy-K3i"/>
                             <constraint firstItem="9wz-nF-Wxr" firstAttribute="trailing" secondItem="PEx-cD-FZE" secondAttribute="trailing" id="tDx-8t-naW"/>
                         </constraints>
                     </view>
@@ -56,21 +67,8 @@
                     <view key="view" contentMode="scaleToFill" id="3o7-aG-QaL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoU-qm-pab" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="192" y="433" width="30" height="30"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <connections>
-                                    <action selector="actionFacebook:" destination="DSI-hp-1rG" eventType="touchUpInside" id="9An-fX-5Qg"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="VI8-zt-0dc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="MoU-qm-pab" firstAttribute="centerY" secondItem="3o7-aG-QaL" secondAttribute="centerY" id="8Sh-Wi-6wL"/>
-                            <constraint firstItem="MoU-qm-pab" firstAttribute="centerX" secondItem="3o7-aG-QaL" secondAttribute="centerX" id="dT3-x5-hUq"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sNM-1M-WDy"/>
                 </viewController>
@@ -230,6 +228,7 @@
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="power" catalog="system" width="128" height="124"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

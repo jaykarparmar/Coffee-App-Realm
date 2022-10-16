@@ -90,6 +90,11 @@ class OrdersViewController: UIViewController {
         self.moveToAddUpdateView(isEdit: false)
     }
     
+    @IBAction func actionLogout(_ sender: Any) {
+        self.presenter?.removeRealm(completion: {
+            kAppDelegate.callLoginScreen()
+        })
+    }
     
 
 }

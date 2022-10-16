@@ -9,17 +9,50 @@ import UIKit
 import FBSDKLoginKit
 import RealmSwift
 
+protocol SigninViewControllerProtocol: AnyObject {
+    
+}
+
 class SigninViewController: UIViewController {
 
     private let realm = try! Realm()
+    var presenter : SigninPresenter?
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    // MARK: Setup
+    
+    private func setup() {
+        let viewController = self
+        let interactor = SigninInteractor()
+        let presenter = SigninPresenter()
+        
+        //View Controller will communicate with only presenter
+        viewController.presenter = presenter
+        
+        //Presenter will communicate with Interector and Viewcontroller
+        presenter.viewController = viewController
+        presenter.interactor = interactor
+        
+        //Interactor will communicate with only presenter.
+        interactor.presenter = presenter
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let loginButton = UIButton(type: .custom)
-                loginButton.backgroundColor = .darkGray
+                loginButton.backgroundColor = .systemBlue
                 loginButton.frame = CGRect(x: 0, y: 0, width: 180, height: 40)
                 loginButton.center = view.center
-                loginButton.setTitle("My Login Button", for: .normal)
+                loginButton.setTitle("Sign In with Facebook", for: .normal)
 
                 // Handle clicks on the button
                 loginButton.addTarget(self, action: #selector(loginButtonClick), for: .touchUpInside)
@@ -69,13 +102,9 @@ class SigninViewController: UIViewController {
     }
     
     func saveUserToRealm(user: SocialUser?) {
-        realm.beginWrite()
-        let fbUser = FBUser()
-        fbUser.token = user?.token
-        fbUser.userName = user?.firstName
-        fbUser.email = user?.email
-        realm.add(fbUser)
-        try! realm.commitWrite()
+        self.presenter?.saveUserToRealm(user: user, completion: {
+            kAppDelegate.callHomeScreen()
+        })
     }
 }
 
@@ -85,4 +114,8 @@ extension UIViewController {
       alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
       self.present(alert, animated: true, completion: nil)
     }
+}
+
+extension UIViewController: SigninViewControllerProtocol {
+    
 }

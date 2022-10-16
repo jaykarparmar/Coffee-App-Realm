@@ -10,6 +10,7 @@ import Foundation
 protocol OrdersPresenterProtocol {
     func getOrdersFromRealm() -> [CoffeeOrder]
     func deleteOrder(order: CoffeeOrder, completion: @escaping () -> Void)
+    func removeRealm(completion: @escaping () -> Void)
 }
 
 class OrdersPresenter: OrdersPresenterProtocol {
@@ -23,6 +24,12 @@ class OrdersPresenter: OrdersPresenterProtocol {
     
     func deleteOrder(order: CoffeeOrder, completion: @escaping () -> Void) {
         self.interactor?.deleteOrder(order: order, completion: {
+            completion()
+        })
+    }
+    
+    func removeRealm(completion: @escaping () -> Void) {
+        self.interactor?.removeRealm(completion: {
             completion()
         })
     }
