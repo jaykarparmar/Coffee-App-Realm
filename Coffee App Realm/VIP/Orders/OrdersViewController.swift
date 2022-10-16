@@ -58,7 +58,6 @@ class OrdersViewController: UIViewController {
     }
     
     func setupView() {
-        
         self.tblOrders.register(UINib(nibName: "OrdersTableViewCell", bundle: nil), forCellReuseIdentifier: "OrdersTableViewCell")
         self.tblOrders.delegate = self
         self.tblOrders.dataSource = self
@@ -70,6 +69,14 @@ class OrdersViewController: UIViewController {
             self.tblOrders.reloadData()
         }
     }
+    
+    func deleteOrder(indexPath: IndexPath!) -> Void {
+        self.presenter?.deleteOrder(order: self.arrOrders[indexPath.row], completion: {
+            self.arrOrders.remove(at: indexPath.row)
+            self.tblOrders.deleteRows(at: [indexPath], with: .fade)
+        })
+    }
+    
     
     func moveToAddUpdateView(isEdit: Bool, order: CoffeeOrder? = nil) {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -102,7 +109,7 @@ extension OrdersViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            
+            self.deleteOrder(indexPath: indexPath)
         }
     }
     

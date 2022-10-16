@@ -10,6 +10,7 @@ import RealmSwift
 
 protocol OrdersInteractorProtocol {
     func getOrdersFromRealm() -> [CoffeeOrder]
+    func deleteOrder(order: CoffeeOrder, completion: @escaping () -> Void)
 }
 
 class OrdersInteractor: OrdersInteractorProtocol {
@@ -21,4 +22,10 @@ class OrdersInteractor: OrdersInteractorProtocol {
         return realm.objects(CoffeeOrder.self).map({$0})
     }
     
+    func deleteOrder(order: CoffeeOrder, completion: @escaping () -> Void) {
+        realm.beginWrite()
+        realm.delete(order)
+        try! realm.commitWrite()
+        completion()
+    }
 }
