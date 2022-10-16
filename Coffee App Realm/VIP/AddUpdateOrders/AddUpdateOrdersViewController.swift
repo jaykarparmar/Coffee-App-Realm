@@ -14,6 +14,7 @@ protocol AddUpdateOrdersViewControllerProtocol: AnyObject {
 
 class AddUpdateOrdersViewController: UIViewController {
 
+    @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var tblCoffeeTypes: UITableView!
     @IBOutlet weak var stepperCoffeeSize: UISegmentedControl!
     @IBOutlet weak var txtName: UITextField!
@@ -67,6 +68,7 @@ class AddUpdateOrdersViewController: UIViewController {
         self.txtEmail.text = user.email
         
         if self.isOrderEdit {
+            self.lblTitle.text = "Update Order"
             for i in 0..<self.arrCoffeeTypes.count {
                 if self.arrCoffeeTypes[i] == self.myOrder?.coffeeType {
                     self.selectedIndex = i
@@ -79,6 +81,9 @@ class AddUpdateOrdersViewController: UIViewController {
                     self.stepperCoffeeSize.selectedSegmentIndex = i
                 }
             }
+        }
+        else {
+            self.lblTitle.text = "Add New Order"
         }
         self.tblCoffeeTypes.register(UINib(nibName: "CoffeeTypeTableViewCell", bundle: nil), forCellReuseIdentifier: "CoffeeTypeTableViewCell")
     }
