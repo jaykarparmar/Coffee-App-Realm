@@ -7,10 +7,13 @@
 
 import UIKit
 import FBSDKCoreKit
+import RealmSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
+    private let realm = try! Realm()
+    
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         let openURLContext = Array(URLContexts).first
         if openURLContext != nil {
@@ -19,12 +22,50 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         }
     }
-          
+    
     // If your app has support for iOS 8, add the following method too
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         return ApplicationDelegate.shared.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
-
+    
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+        /// 1. Capture the scene
+        
+        if realm.objects(FBUser.self).map({$0}).count > 0 {
+            user = realm.objects(FBUser.self).map({$0}).first as! FBUser
+        }
+        
+        //        print(realm.objects(FBUser.self).map({$0}))
+        
+        if user.token == nil {
+            print("User Not Available")
+        }
+        else {
+            print("User Available")
+            self.callHomeScreen(scene)
+        }
+        
+    }
+    
+    func callHomeScreen(_ scene: UIScene) {
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        /// 2. Create a new UIWindow using the windowScene constructor which takes in a window scene.
+        let window = UIWindow(windowScene: windowScene)
+        
+        /// 3. Create a view hierarchy programmatically
+        
+        let navigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeNavigationController") as! UINavigationController
+        //           let navigation = UINavigationController(rootViewController: navigationController)
+        
+        /// 4. Set the root view controller of the window with your view controller
+        window.rootViewController = navigationController
+        
+        /// 5. Set the window and call makeKeyAndVisible()
+        self.window = window
+        window.makeKeyAndVisible()
+    }
 }
 /*
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {

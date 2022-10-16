@@ -63,6 +63,9 @@ class AddUpdateOrdersViewController: UIViewController {
     }
     
     func setupView() {
+        self.txtName.text = user.userName
+        self.txtEmail.text = user.email
+        
         if self.isOrderEdit {
             for i in 0..<self.arrCoffeeTypes.count {
                 if self.arrCoffeeTypes[i] == self.myOrder?.coffeeType {
